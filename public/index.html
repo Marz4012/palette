@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <script src="https://unpkg.com/react@15.3.0/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.0/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    
+    <div id="container"></div>
+
+    <script type="text/babel">
+   
+   class Square extends React.Component {
+  render() {
+    var squareStyle = {
+      height: "150px",
+      backgroundColor: this.props.color
+    };
+    return (
+
+    <div style={squareStyle}>
+
+    </div>
+
+    );
+  }
+}
+
+class Label extends React.Component {
+  render() {
+    var labelStyle = {
+      fontFamily: "sans-serif",
+      fontWeight: "bold",
+      padding: "13px",
+      margin: 0
+    };
+    return (
+
+      <p style={labelStyle}> {this.props.color}</p>
+ 
+    );
+  }
+}
+
+class Card extends React.Component {
+  render() {
+    var cardStyle = {
+      float: "left",
+      margin: "5px",
+      height: "200px",
+      width: "150px",
+      padding: 0,
+      backgroundColor: "#FFF",
+      WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+      filter: "drop-shadow(0px 0px 5px #666)"
+      
+  };
+    return (
+
+    <div style={cardStyle}>
+     <Square color={this.props.color}/>
+     <Label color={this.props.color}/>
+      </div>
+    );
+  }
+}
+
+   ReactDOM.render(
+      <div>
+        <Card color="#641E16"/>
+        <Card color="#7B241C"/>
+        <Card color="#922B21"/>
+        <Card color="#A93226"/>
+        <Card color="#C0392B"/>
+        <Card color="#CD6155"/>
+        <Card color="#D98880"/>
+        <Card color="#E6B0AA"/>
+        <Card color="#F2D7D5"/>
+        <Card color="#F9EBEA"/>
+
+        <Card color="#78281F"/> 
+        <Card color="#943126"/>
+        <Card color="#B03A2E"/>
+        <Card color="#CB4335"/>
+        <Card color="#E74C3C"/>
+        <Card color="#EC7063"/>
+        <Card color="#F1948A"/>
+        <Card color="#F5B7B1"/>
+        <Card color="#FADBD8"/>
+        <Card color="#FDEDEC"/>
+        
+        <Card color="#512E5F"/>
+        <Card color="#633974"/>
+        <Card color="#76448A"/>
+        <Card color="#884EA0"/>
+        <Card color="#9B59B6"/>
+        <Card color="#AF7AC5"/>
+        <Card color="#C39BD3"/>
+        <Card color="#D7BDE2"/>
+        <Card color="#EBDEF0"/>
+        <Card color="#F5EEF8"/>
+
+        <Card color="#154360"/>
+        <Card color="#1A5276"/>
+        <Card color="#1F618D"/>
+        <Card color="#2471A3"/>
+        <Card color="#2980B9"/>
+        <Card color="#5499C7"/>
+        <Card color="#7FB3D5"/>
+        <Card color="#A9CCE3"/>
+        <Card color="#D4E6F1"/>
+        <Card color="#EAF2F8"/>
+
+
+      </div>,
+      document.querySelector("#container")
+    );
+    </script>
+   
+ 
+  </body>
+</html>
